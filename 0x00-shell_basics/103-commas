@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la | awk '{printf "%s%s%s", $9, ($1 ~ /^d/ ? "/" : ""), (NR > 2 ? ", " : "")} END {print ""}' | sed 's/,\s*$//'
+ls -p -a1 | awk 'NR > 2 { printf "%s%s, ", $0, (/\/$/ ? "" : ", ") } END { print "" }' | sed 's/, $/\n/'
