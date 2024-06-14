@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -la | awk '{printf "%s%s%s", $9, ($1 ~ /^d/ ? "/" : ""), (NR > 2 ? ", " : "")} END {print ""}' | sed 's/,\s*$//'
