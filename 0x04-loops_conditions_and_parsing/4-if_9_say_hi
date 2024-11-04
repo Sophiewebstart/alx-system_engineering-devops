@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times and then on the
+# 9th iteration, displays "Best School" then Hi on a new line
+
+var='Best School'
+var2='Hi'
+s=1
+while [ $s -le 10 ]
+do
+    if [ $s -eq 9 ]; then
+        echo "$var"
+        echo "$var2"
+    else
+        echo "$var"
+    fi
+    ((s++))
+done
