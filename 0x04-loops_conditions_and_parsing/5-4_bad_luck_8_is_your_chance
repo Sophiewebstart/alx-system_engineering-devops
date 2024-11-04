@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is loops from 1 to 10 and displays "bad luck"
+# on 4th loop iteration, "good luck" on 8th loop iteration and
+# "Best School" for the other iterations
+
+var='Best School'
+var2='bad luck'
+var3='good luck'
+s=1
+while [ $s -le 10 ]
+do
+    if [ $s -eq 4 ]; then
+        echo "$var2"
+    elif [ $s -eq 8 ]; then
+        echo "$var3"
+    else
+        echo "$var"
+    fi
+    ((s++))
+done
