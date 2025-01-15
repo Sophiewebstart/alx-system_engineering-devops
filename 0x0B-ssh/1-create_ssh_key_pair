@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# this bash script contains name of private key as school, number of
+# bits in key to be 4096 and catchphrase as betty
+
+ssh-keygen -b 4096 -N betty -f school
